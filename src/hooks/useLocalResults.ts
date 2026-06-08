@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Duration, TypingResult } from "../types";
 
 const STORAGE_KEY = "chimpScriptResults";
-const MAX_RESULTS = 50;
+const MAX_RESULTS = 1000;
 
 function parseResults(raw: string | null): TypingResult[] {
   if (!raw) {

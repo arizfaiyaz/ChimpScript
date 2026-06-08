@@ -68,6 +68,58 @@ html.light .border-white\/10 {
   border-color: rgba(21, 26, 19, 0.14) !important;
 }
 
+html.light .profile-share-card,
+html.light .profile-share-card .text-white {
+  color: #ffffff !important;
+}
+
+html.light .profile-share-card .text-zinc-400 {
+  color: #a1a1aa !important;
+}
+
+html.light .profile-share-card .text-zinc-500,
+html.light .profile-share-card .text-zinc-600 {
+  color: #71717a !important;
+}
+
+html.light .profile-share-card .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.light .profile-share-card .bg-black\/20 {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+html.light .profile-share-card .bg-black\/25 {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.profile-button {
+  box-sizing: border-box;
+  height: 40px;
+  min-height: 40px;
+  padding: 0 16px !important;
+  line-height: 1;
+  box-shadow: none;
+}
+
+.profile-button svg {
+  flex: 0 0 auto;
+}
+
+html.light .profile-button {
+  color: #ffffff !important;
+  background-color: #151a13 !important;
+  border-color: rgba(21, 26, 19, 0.28) !important;
+  box-shadow: 0 10px 22px rgba(21, 26, 19, 0.12);
+}
+
+html.light .profile-button:hover {
+  color: #ffffff !important;
+  background-color: #20281c !important;
+  border-color: rgba(101, 163, 13, 0.55) !important;
+}
+
 button,
 select {
   font: inherit;

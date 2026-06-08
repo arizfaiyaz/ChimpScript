@@ -1,8 +1,9 @@
-import { BarChart3, RotateCcw } from "lucide-react";
+import { BarChart3, RotateCcw, UserRound } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CategorySelector } from "./components/CategorySelector";
 import { Header } from "./components/Header";
 import { KeyboardDisplay } from "./components/KeyboardDisplay";
+import { ProfileModal } from "./components/ProfileModal";
 import { ResultsModal } from "./components/ResultsModal";
 import { StatCard } from "./components/StatCard";
 import { ThemeToggle } from "./components/ThemeToggle";
@@ -22,6 +23,7 @@ export default function App() {
   const [duration, setDuration] = useState<Duration>(30);
   const [category, setCategory] = useState<Category>("Mixed");
   const [resultsOpen, setResultsOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
   const [theme, setTheme] = useState<"dark" | "light">(() => {
     return window.localStorage.getItem("chimpScriptTheme") === "light" ? "light" : "dark";
   });
@@ -69,6 +71,14 @@ export default function App() {
               <BarChart3 size={16} />
               Results
             </button>
+            <button
+              className="profile-button inline-flex items-center gap-2 rounded-[8px] border border-lime-300/25 bg-lime-300/[0.07] px-4 py-2 font-mono text-sm text-lime-200 transition hover:border-lime-300/60 hover:text-white"
+              onClick={() => setProfileOpen(true)}
+              type="button"
+            >
+              <UserRound size={16} />
+              Profile
+            </button>
           </div>
         </section>
 
@@ -98,6 +108,7 @@ export default function App() {
         open={resultsOpen}
         results={results}
       />
+      <ProfileModal onClose={() => setProfileOpen(false)} open={profileOpen} results={results} />
     </main>
   );
 }
